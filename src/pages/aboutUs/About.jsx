@@ -153,7 +153,7 @@ function About() {
           </div>
         </div>
         <div className="link-container">
-          <Link to={"/ourServices"} className="link">
+          <Link to="/ourServices" className="link">
             See More →
           </Link>
         </div>
