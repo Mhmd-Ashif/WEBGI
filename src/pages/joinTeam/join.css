@@ -1,0 +1,83 @@
+.joinContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .joinWrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .joinWrapper h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1d1d44;
+  }
+  
+  .joinWrapper p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .developerCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .developerCard {
+    position: relative;
+    width: 250px;
+    margin: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  .developerCard img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .developerCard h3 {
+    margin-bottom: 10px;
+    color: #1d1d44;
+  }
+  
+  .developerCard p {
+    margin-bottom: 0;
+    color: #555;
+  }
+  
+  .developerDetails {
+    display: none;
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  .developerCard:hover {
+    transform: scale(1.1);
+  }
+  
+  .developerCard:hover .developerDetails {
+    display: block;
+  }
+  
+  .developerCard:hover ~ .developerCard {
+    opacity: 0.3;
+  }
+  
