@@ -1,0 +1,96 @@
+.contactContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contactWrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  
+  .contactWrapper h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1d1d44;
+  }
+  
+  .contactWrapper p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formGroup {
+    margin-bottom: 15px;
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .formGroup input,
+  .formGroup textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .formGroup textarea {
+    resize: vertical;
+  }
+  
+  .submitButton {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: flex-start;
+  }
+  
+  .submitButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .contactDetails {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .contactDetails h3 {
+    margin-bottom: 10px;
+    color: #1d1d44;
+  }
+  
+  .contactDetails p {
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .contactDetails a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .contactDetails a:hover {
+    text-decoration: underline;
+  }
+  
