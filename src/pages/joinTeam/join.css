@@ -7,10 +7,13 @@
   
   .joinWrapper {
     width: 100%;
-    max-width: 1200px;
-    margin: 20px auto;
+    /* max-width: 1200px; */
+    height: 100%;
+    margin: auto;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin-top: 5%;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     background-color: #ffffff;
     border-radius: 10px;
     text-align: center;
@@ -20,12 +23,18 @@
     text-align: center;
     margin-bottom: 20px;
     color: #1d1d44;
+    font-size: 50px;
+    font-weight: 900;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
   
   .joinWrapper p {
     text-align: center;
     margin-bottom: 20px;
     color: #555;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 300;
   }
   
   .developerCards {
@@ -81,3 +90,7 @@
     opacity: 0.3;
   }
   
+
+.teamfotter{
+  margin-top: 5%;
+}

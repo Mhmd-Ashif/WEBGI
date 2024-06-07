@@ -16,7 +16,7 @@ const Join = () => {
         <div className="developerCards">
           <div className="developerCard">
             <img src={dev1} alt="Developer 1" />
-            <h3>BASKARAN</h3>
+            <h3>BASKARAN M S</h3>
             <p>CEO & Full Stack Developer</p>
             <div className="developerDetails">
               <p>Baskaran is a passionate full-stack developer with a knack for creating dynamic and responsive web applications. He has a solid understanding of both frontend and backend technologies and leads the team with a vision for innovation.</p>
@@ -40,6 +40,7 @@ const Join = () => {
           </div>
         </div>
       </div>
+      <div className="teamfotter"></div>
       <Footer />
     </div>
   );

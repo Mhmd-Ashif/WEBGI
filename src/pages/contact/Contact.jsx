@@ -1,76 +1,74 @@
 import React, { useState } from 'react';
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/footer/Footer';
+import { db } from '../../DB/firebaseConfig';
+import { collection, addDoc } from 'firebase/firestore';
 import './contact.css';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
+  const [form, setForm] = useState({
+    firstName: '',
+    lastName: '',
     email: '',
-    message: '',
+    message: ''
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
+    setForm({
+      ...form,
+      [name]: value
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form data submitted:', formData);
-    // Here you would typically handle form submission, e.g., sending data to a server.
+    try {
+      const docRef = await addDoc(collection(db, "contacts"), form);
+      alert("Form submitted successfully");
+      setForm({ firstName: '', lastName: '', email: '', message: '' });
+    } catch (e) {
+      console.error("Error adding document: ", e);
+      alert("Error submitting form");
+    }
   };
 
   return (
-    <div className="contactContainer">
+    <div className="contactContainer ">
       <Navbar />
       <div className="contactWrapper">
-        <h2>Contact Us</h2>
-        <form onSubmit={handleSubmit} className="contactForm">
-          <div className="formGroup">
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
+        <div className="contactInfo">
+          <h2>Contact us</h2>
+          <p>Need to get in touch with us? Either fill out the form with your inquiry or find the department email you'd like to contact below.</p>
+          <div className="contactDetails">
+            <p><strong>Email:</strong> <a href="mailto:webgi215.official@gmail.com">webgi215.official@gmail.com</a></p>
+            <p><strong>Phone:</strong> +91-9342570232</p>
           </div>
-          <div className="formGroup">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="formGroup">
-            <label htmlFor="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-          </div>
-          <button type="submit" className="submitButton">Submit</button>
-        </form>
-        <div className="contactDetails">
-          <h3>Our Contact Information</h3>
-          <p><strong>Email:</strong> <a href="mailto:webgi215.official@gmail.com">webgi215.official@gmail.com</a></p>
-          <p><strong>Phone:</strong> <a href="tel:+919342570232">+91-9342570232</a></p>
+        </div>
+        <div className="contactForm">
+          <form onSubmit={handleSubmit}>
+            <div className="formGroup">
+              <label htmlFor="firstName">First name*</label>
+              <input type="text" id="firstName" name="firstName" value={form.firstName} onChange={handleChange} required />
+            </div>
+            <div className="formGroup">
+              <label htmlFor="lastName">Last name*</label>
+              <input type="text" id="lastName" name="lastName" value={form.lastName} onChange={handleChange} required />
+            </div>
+            <div className="formGroup">
+              <label htmlFor="email">Email*</label>
+              <input type="email" id="email" name="email" value={form.email} onChange={handleChange} required />
+            </div>
+            <div className="formGroup">
+              <label htmlFor="message">What can we help you with?</label>
+              <textarea id="message" name="message" rows="4" value={form.message} onChange={handleChange} required></textarea>
+            </div>
+            <button type="submit" className="submitButton">Submit</button>
+          </form>
         </div>
       </div>
-      <Footer />
+      <div className="confotter"></div>
+      < Footer />
     </div>
   );
 };
