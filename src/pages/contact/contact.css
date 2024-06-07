@@ -7,11 +7,11 @@
 
 .contactWrapper {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   width: 100%;
-  max-width: 1200px;
-  padding: 20px;
-  margin-top: 20%;
+  /* max-width: 1200px; */
+  padding: 50px;
+  /* margin-top: 20%; */
   box-sizing: border-box;
 }
 
@@ -75,7 +75,7 @@
 
 .formGroup input,
 .formGroup textarea {
-  width: 100%;
+  max-width: 98%;
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -97,18 +97,19 @@
   background-color: #434190;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1060px) {
   .contactWrapper {
     flex-direction: column;
+    row-gap: 30px;
   }
 
   .contactInfo,
   .contactForm {
-    width: 100%;
+    width: 90%;
   }
 }
 
 
 .confotter{
-  margin-top: 25%;
+  /* margin-top: 25%; */
 }
