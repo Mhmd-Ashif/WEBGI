@@ -40,6 +40,7 @@ const Join = () => {
           </div>
         </div>
       </div>
+      <div className="teamfotter"></div>
       <Footer />
     </div>
   );

@@ -11,7 +11,7 @@
   width: 100%;
   max-width: 1200px;
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 20%;
   box-sizing: border-box;
 }
 
@@ -106,4 +106,9 @@
   .contactForm {
     width: 100%;
   }
+}
+
+
+.confotter{
+  margin-top: 25%;
 }

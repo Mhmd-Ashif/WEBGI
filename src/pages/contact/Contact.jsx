@@ -34,7 +34,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contactContainer">
+    <div className="contactContainer ">
       <Navbar />
       <div className="contactWrapper">
         <div className="contactInfo">
@@ -67,7 +67,8 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      <Footer />
+      <div className="confotter"></div>
+      < Footer />
     </div>
   );
 };
